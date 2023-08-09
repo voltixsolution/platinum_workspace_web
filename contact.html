@@ -161,7 +161,7 @@
                     
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form action="https://formsubmit.co/amjadchatholi@gmail.com"  method="POST">
+                    <form onsubmit="sendMail(); reset(); return false">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -270,6 +270,8 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

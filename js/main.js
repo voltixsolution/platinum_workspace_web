@@ -118,3 +118,47 @@
     
 })(jQuery);
 
+
+function sendMail() {
+    try {
+        fetch("https://voltix-email-service.onrender.com/sendmail", {
+            method: "POST",
+            body: JSON.stringify({
+                name: document.getElementById("name").value,
+                from: document.getElementById("email").value,
+                to: 'platinumworkspace@gmail.com',
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            Swal.fire({
+                title: 'Success!',
+                text: 'Thank you for your valuable message',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 1500
+            })
+    }
+    catch(error) {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast.fire({
+            icon: 'error',
+            title: 'Please check your email address'
+        })
+    }
+}
+
