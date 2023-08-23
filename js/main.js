@@ -118,6 +118,10 @@
     
 })(jQuery);
 
+function onClickphoneIcon() {
+    window.open('tel:+917034040213')
+}
+
 
 function sendMail() {
     try {

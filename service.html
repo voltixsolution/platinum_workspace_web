@@ -47,10 +47,19 @@
         <div class="row g-0 d-none d-lg-flex">
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href="https://www.facebook.com/PlatinumWorkspace"><i class="fab fa-facebook-f"></i></a>            
-                    <a class="btn btn-link text-light" href="https://www.linkedin.com/company/platinum-workspace-llp/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href="https://www.instagram.com/platinumworkspace/"><i class="fab fa-instagram"></i></a>
+                    
+                    <a class="btn btn-link text-light" href="https://www.facebook.com/PlatinumWorkspace">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-link text-light" href="https://www.linkedin.com/company/platinum-workspace-llp/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-link text-light" href="https://www.instagram.com/platinumworkspace/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-link text-light" href="https://www.youtube.com/@platinumworkspace216">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 text-end">
@@ -75,10 +84,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Services</a>
-                
+                <div class="dropdown nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="virtualoffice.html">Virtual Office</a>
+                        <a class="dropdown-item" href="coworking.html">Co-working</a>
+                        <a class="dropdown-item" href="meeting_rooms.html">Meeting Rooms</a>
+                        <!-- Add more service links as needed -->
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
             <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
