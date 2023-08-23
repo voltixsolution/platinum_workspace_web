@@ -119,7 +119,7 @@
 })(jQuery);
 
 function onClickphoneIcon() {
-    window.open('tel:+917034040213')
+    window.open('tel:+916238742288')
 }
 
 
