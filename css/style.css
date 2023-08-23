@@ -705,7 +705,7 @@ h6,
   left: 15px;
   bottom: -15;
   z-index: 99999! important;
-  background: var(--color-primary)! important;
+  background:#02245B;
   width: 44px! important;
   height: 44px! important;
   border-radius: 50px! important;
@@ -723,13 +723,13 @@ h6,
 
 .whatsupp-icon i {
   font-size: 24px! important;
-  color: #fff! important;
+  color:#ff5e14! important;
   line-height: 0! important;
 }
 
 .whatsupp-icon:hover {
-  background: rgba(99, 228, 13, 0.8)! important;
-  color: #fff! important;
+  background: white;
+  color: white;
 }
 
 .whatsupp-icon.active {
@@ -744,7 +744,7 @@ h6,
   left: 15px! important;
   bottom: -15px! important;
   z-index: 99999! important;
-  background: var(--color-primary)! important;
+  background:#02245B;
   width: 42px! important;
   height: 42px! important;
   border-radius: 50px! important;
@@ -762,13 +762,13 @@ h6,
 
 .phone-icon i {
   font-size: 24px! important;
-  color: #fff! important;
+  color: #ff5e14! important;
   line-height: 0! important;
 }
 
 .phone-icon:hover {
-  background: rgba(100, 94, 93, 0.8)! important;
-  color: #fff! important;
+  background: white;
+  color: white;
 }
 
 .phone-icon.active {
