@@ -491,11 +491,8 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative me-lg-4">
                         <img class="img-fluid w-100" src="img/youtube.png" alt="">
-                        <span
-                            class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
-                            style="width: 120px; height: 120px;"></span>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="" data-bs-target="#videoModal">
+                        <span class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block" style="width: 120px; height: 120px;"></span>
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-bs-target="#videoModal" data-src="https://www.youtube.com/embed/u45xfDCrEEE">
                             <span></span>
                         </button>
                     </div>
@@ -571,23 +568,42 @@
 
 
     <!-- Video Modal Start -->
-    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe width="420" height="345" src="https://www.youtube.com/embed/u45xfDCrEEE">
-                        </iframe>
-                    </div>
+    <!-- Modal -->
+<!-- Modal -->
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">YouTube Video</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe width="420" height="345" src="" id="videoFrame"></iframe>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<script>
+    // JavaScript to set the video source when the play button is clicked
+    var playButton = document.querySelector('.btn-play');
+    var videoFrame = document.getElementById('videoFrame');
+    var videoModal = document.getElementById('videoModal');
+
+    playButton.addEventListener('click', function () {
+        var videoSrc = this.getAttribute('data-src');
+        videoFrame.src = videoSrc;
+    });
+
+    // JavaScript to close the video when the modal is closed
+    videoModal.addEventListener('hidden.bs.modal', function () {
+        videoFrame.src = ''; // Clear the video source to stop it
+    });
+</script>
+
     
     <!-- Video Modal End -->
 
